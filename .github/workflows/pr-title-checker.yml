@@ -7,3 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: thehanimo/pr-title-checker@v1.3.4
+      - name: Test
+        run: |
+          echo The Title of your PR is ${{ github.event.pull_request.title }}
