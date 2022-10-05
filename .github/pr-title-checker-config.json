@@ -1,0 +1,14 @@
+{
+  "LABEL": {
+    "name": "title needs formatting",
+    "color": "d21404"
+  },
+  "CHECKS": {
+    "prefixes": ["fix: ", "feat: "]
+  },
+  "MESSAGES": {
+    "success": "All OK",
+    "failure": "Failing CI test",
+    "notice": "notice notice"
+  }
+}
