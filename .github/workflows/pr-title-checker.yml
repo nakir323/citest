@@ -1,15 +1,17 @@
 name: "PR Title Checker"
 on:
-  pull_request:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - labeled
+      - unlabeled
 
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      # - uses: thehanimo/pr-title-checker@v1.3.4
-      - name: Test
-        run: |
-          echo The Title of your PR is ${{ github.event.pull_request.title }}
-          if  [[ ${{ github.event.pull_request.title }} != fix* ]] ; then
-              exit 1
-          fi
+      - uses: thehanimo/pr-title-checker@v1.3.4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
