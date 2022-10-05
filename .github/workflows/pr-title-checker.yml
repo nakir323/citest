@@ -10,3 +10,6 @@ jobs:
       - name: Test
         run: |
           echo The Title of your PR is ${{ github.event.pull_request.title }}
+          if  [[ ${{ github.event.pull_request.title }} != fix* ]] ; then
+              exit 1
+          fi
