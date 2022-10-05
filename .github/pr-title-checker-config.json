@@ -1,0 +1,13 @@
+{
+  "LABEL": {
+    "name": "wrong title format",
+    "color": "d32f2f"
+  },
+  "CHECKS": {
+    "prefixes": ["fix: ", "feat: "]
+  },
+  "MESSAGES": {
+    "success": "PR title is OK",
+    "failure": "PR title needs formatting"
+  }
+}
