@@ -1,9 +1,10 @@
 {
   "LABEL": {
     "name": "title needs formatting",
-    "color": "d21404"
+    "color": "d32f2f"
   },
   "CHECKS": {
+    // test
     "prefixes": ["fix: ", "feat: "]
   },
   "MESSAGES": {
